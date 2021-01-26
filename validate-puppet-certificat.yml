@@ -1,0 +1,15 @@
+---
+
+- hosts: Self
+
+  become: true
+
+  vars_files:
+    - '.passvars.yml'
+
+  vars:
+        ansible_become_pass: "{{ sudopassword }}"
+
+  tasks:
+    - name: Validate puppet agent certificat
+      command: /opt/puppetlabs/bin/puppetserver ca sign --all
