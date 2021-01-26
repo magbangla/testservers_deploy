@@ -1,6 +1,6 @@
 ---
 
-- hosts: Self
+- hosts: master
 
   become: true
 
