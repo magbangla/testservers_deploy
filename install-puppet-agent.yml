@@ -63,9 +63,14 @@
       apt_repository:
         repo: ppa:canonical-chromium-builds/stage
         state: present
-
+#install chromium web browser
     - name: Update apt and install chromium browser
       apt: update_cache=yes name=chromium-browser state=latest
-
+#install git
     - name: install git
       apt: name=git update_cache=yes force_apt_get=yes
+# install chromium webdriver
+    - name: Update apt and install chromium webdriver
+      apt: update_cache=yes name=chromium-chromedriver state=latest
+
+
