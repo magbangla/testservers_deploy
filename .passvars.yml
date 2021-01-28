@@ -11,3 +11,5 @@ sudopassword: !vault |
 server_ip: '192.168.56.109'
 # path to puppet excecutables
 puppet_path: '/opt/puppetlabs/puppet/bin'
+puppet_server_ip: '192.168.56.109'
+puppet_node_1: '192.168.56.110'

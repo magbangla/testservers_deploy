@@ -12,4 +12,4 @@
 
   tasks:
     - name: Validate puppet agent certificat
-      command: /opt/puppetlabs/bin/puppetserver ca sign --all
+      command: /opt/puppetlabs/bin/puppetserver ca list

@@ -31,6 +31,7 @@
 
     - name: configue puppet 2
       command: echo "server=puppet" >> /etc/puppetlabs/puppet/puppet.conf
+
     - name: configue puppet 3
       command: echo "environment=production" >> /etc/puppetlabs/puppet/puppet.conf
 
@@ -53,6 +54,9 @@
         regexp: '^(PATH=\")({{ puppet_path }}:)?((?(2).*?(?!(?:.\"))|.*?(?!(?:{{ puppet_path }}))))(:{{ puppet_path }})?((?(4).*|\"))'
         line: '\1\3:{{ puppet_path }}\5'
         backrefs: yes
+
+    - name: run puppet agent
+      command: puppet agent -t
 
 #chromium and git installation
     - name: Add chrominm Repository
