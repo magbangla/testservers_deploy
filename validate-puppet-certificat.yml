@@ -15,7 +15,6 @@
       command: /opt/puppetlabs/bin/puppetserver ca list
       wait_for:
           - "stderr_lines neq ''"
-    
-  tasks:
+          
     - name: Validate puppet agent certificat
       command: /opt/puppetlabs/bin/puppetserver ca sign --all
