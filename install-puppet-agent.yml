@@ -55,9 +55,6 @@
         line: '\1\3:{{ puppet_path }}\5'
         backrefs: yes
 
-    - name: run puppet agent
-      command: puppet agent -t
-
 #chromium and git installation
     - name: Add chrominm Repository
       apt_repository:
