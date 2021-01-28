@@ -14,7 +14,7 @@
     - name: check if there are any certificat
       command: /opt/puppetlabs/bin/puppetserver ca list
       wait_for:
-          - "result[] neq ''"
+          - "result[0] neq ''"
     
   tasks:
     - name: Validate puppet agent certificat
