@@ -12,8 +12,5 @@
 
   tasks:
 
-    - name: check if there are any certificat
-      command: /opt/puppetlabs/bin/puppetserver ca list
-
     - name: Validate puppet agent certificat
       command: /opt/puppetlabs/bin/puppetserver ca sign --all
