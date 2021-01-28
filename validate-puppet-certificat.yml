@@ -11,11 +11,11 @@
         ansible_become_pass: "{{ sudopassword }}"
 
   tasks:
-  
+
     - name: check if there are any certificat
       command: /opt/puppetlabs/bin/puppetserver ca list
       wait_for:
-          - "stderr_lines neq ''"
+          - "stderr": ""
 
     - name: Validate puppet agent certificat
       command: /opt/puppetlabs/bin/puppetserver ca sign --all
