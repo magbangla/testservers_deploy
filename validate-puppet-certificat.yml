@@ -16,7 +16,7 @@
       command: /opt/puppetlabs/bin/puppetserver ca list
       register: output
       
-    - debug: var=output
+    - debug: var=output.cmd[0]
 
     - name: Validate puppet agent certificat
       command: /opt/puppetlabs/bin/puppetserver ca sign --all
