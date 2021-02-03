@@ -71,7 +71,7 @@
 
 # run connect slave node to jenkins
     - name: Change the working directory to /home/edureka/ before executing the command
-      ansible.builtin.shell: connect_to_jenkins_master.sh
+      command: sh connect_to_jenkins_master.sh
       args:
         chdir: /home/edureka/
 
