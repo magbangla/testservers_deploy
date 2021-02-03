@@ -17,6 +17,7 @@
       register: output
       
     - debug: var=output.stdout_lines[0]
-
+#"No certificates to list"
     - name: Validate puppet agent certificat
       command: /opt/puppetlabs/bin/puppetserver ca sign --all
+      when: output.stdout_lines[0] == "No certificates to list"
