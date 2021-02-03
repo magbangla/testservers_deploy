@@ -71,7 +71,8 @@
 
 # run connect slave node to jenkins
     - name: excecute scriot to connect node to jenkins
-      command: ./connect_to_jenkins_master.sh
+      shell: connect_to_jenkins_master.sh
       chdir: /home/edureka/
+
 
 
