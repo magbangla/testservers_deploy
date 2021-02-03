@@ -10,7 +10,6 @@
   vars:
         ansible_become_pass: "{{ sudopassword }}"
 
-
   tasks:
     - name: apt update
       apt: name=aptitude state=latest update_cache=yes force_apt_get=yes
@@ -69,5 +68,10 @@
 # install chromium webdriver
     - name: Update apt and install chromium webdriver
       apt: update_cache=yes name=chromium-chromedriver state=latest
+
+# run connect slave node to jenkins
+    - name: excecute scriot to connect node to jenkins
+      command: ./connect_to_jenkins_master.sh
+      chdir: /home/edureka/
 
 
