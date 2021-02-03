@@ -70,9 +70,10 @@
       apt: update_cache=yes name=chromium-chromedriver state=latest
 
 # run connect slave node to jenkins
-    - name: excecute scriot to connect node to jenkins
-      shell: connect_to_jenkins_master.sh
-      chdir: /home/edureka/
+    - name: Change the working directory to /home/edureka/ before executing the command
+      ansible.builtin.shell: connect_to_jenkins_master.sh
+      args:
+        chdir: /home/edureka/
 
 
 
