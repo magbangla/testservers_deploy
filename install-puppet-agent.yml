@@ -26,7 +26,7 @@
       apt: name=puppet-agent update_cache=yes force_apt_get=yes
 
     - name: configue puppet 1
-      command: echo "cetname=puppet-agent" >> /etc/puppetlabs/puppet/puppet.
+      command: echo "cetname=puppet-agent" >> /etc/puppetlabs/puppet/puppet.conf
 
     - name: configue puppet 2
       command: echo "server=puppet" >> /etc/puppetlabs/puppet/puppet.conf
@@ -55,7 +55,7 @@
         backrefs: yes
 
 #chromium and git installation
-    - name: Add chrominm Repository
+    - name: Add chromium Repository
       apt_repository:
         repo: ppa:canonical-chromium-builds/stage
         state: present
